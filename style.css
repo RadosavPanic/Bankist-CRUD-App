@@ -73,11 +73,15 @@ nav {
   font-size: 1.9rem;
   font-weight: 500;
   display: none; /* initially */
+  border: none;
+}
+
+.logout__btn:hover {
+  cursor: pointer;
 }
 
 .login__btn:hover,
 .login__btn:focus,
-.logout__btn:hover,
 .btn--sort:hover,
 .btn--sort:focus {
   outline: none;
