@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #444;
   background-color: #f3f3f3;
   height: 100vh;
@@ -53,7 +53,7 @@ nav {
 
 .login__input:focus {
   outline: none;
-  border: 1px solid #ccc;
+  border: 1px solid #0fdc19;
 }
 
 .login__input::placeholder {
@@ -69,8 +69,15 @@ nav {
   transition: all 0.3s;
 }
 
+.logout__btn {
+  font-size: 1.9rem;
+  font-weight: 500;
+  display: none; /* initially */
+}
+
 .login__btn:hover,
 .login__btn:focus,
+.logout__btn:hover,
 .btn--sort:hover,
 .btn--sort:focus {
   outline: none;
