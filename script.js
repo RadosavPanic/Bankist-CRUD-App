@@ -170,6 +170,18 @@ const updateUI = function (acc) {
   calcDisplaySummary(acc);
 };
 
+const hideUI = function () {
+  // Reset the welcome message and login form
+  labelWelcome.textContent = "Log in to get started";
+  containerApp.style.opacity = 0;
+
+  inputLoginUsername.style.display = "block";
+  inputLoginPin.style.display = "block";
+  btnLogin.style.display = "block";
+  // Hide the logout button on logout
+  btnLogout.style.display = "none";
+};
+
 const startLogOutTimer = function () {
   const tick = function () {
     const minutes = String(Math.trunc(time / 60)).padStart(2, 0);
@@ -214,19 +226,11 @@ btnLogin.addEventListener("click", function (e) {
     inputLoginPin.style.display = "none";
     btnLogin.style.display = "none";
 
-    btnLogout.style.display = "block"; // Initially, hide the logout button
+    btnLogout.style.display = "block"; // Initially, logout button is hidden
 
     /* Logout action */
     btnLogout.addEventListener("click", function () {
-      // Reset the welcome message and login form
-      labelWelcome.textContent = "Log in to get started";
-      containerApp.style.opacity = 0;
-
-      inputLoginUsername.style.display = "block";
-      inputLoginPin.style.display = "block";
-      btnLogin.style.display = "block";
-      // Hide the logout button on logout
-      btnLogout.style.display = "none";
+      hideUI();
     });
 
     const now = new Date();
@@ -323,13 +327,7 @@ btnClose.addEventListener("click", function (e) {
     inputCloseUsername.blur();
     inputClosePin.blur();
 
-    containerApp.style.opacity = 0;
-    labelWelcome.textContent = "Log in to get started";
-    inputLoginUsername.style.display = "block";
-    inputLoginPin.style.display = "block";
-    btnLogin.style.display = "block";
-    // Hide the logout button on logout
-    btnLogout.style.display = "none";
+    hideUI();
   }
 });
 
