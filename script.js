@@ -191,8 +191,7 @@ const startLogOutTimer = function () {
 
     if (time === 0) {
       clearInterval(timer);
-      labelBalance.textContent = "Log in to get started";
-      containerApp.style.opacity = 0;
+      hideUI();
     }
 
     time--;
