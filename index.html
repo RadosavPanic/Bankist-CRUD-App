@@ -24,6 +24,7 @@
         <input
           type="text"
           placeholder="user"
+          maxlength="4"
           class="login__input login__input--user"
         />
 
@@ -32,7 +33,9 @@
           placeholder="PIN"
           maxlength="4"
           class="login__input login__input--pin"
+          pattern="\d+"
         />
+
         <button class="login__btn">&rarr;</button>
         <button class="logout__btn">LOG OUT</button>
       </form>

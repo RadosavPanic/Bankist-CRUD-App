@@ -60,6 +60,27 @@ nav {
   color: #bbb;
 }
 
+.login__input--pin:invalid {
+  animation: shake 0.3s forwards;
+  color: #f00;
+  border-color: #f00;
+}
+
+@keyframes shake {
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(-5px);
+  }
+}
+
 .login__btn {
   border: none;
   background: none;
