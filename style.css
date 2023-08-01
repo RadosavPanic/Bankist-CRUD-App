@@ -56,6 +56,27 @@ nav {
   border: 1px solid #0fdc19;
 }
 
+.tooltip {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position the tooltip above the input */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.login__input:focus + .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
 .login__input::placeholder {
   color: #bbb;
 }
